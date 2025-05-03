@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Киберпанк цвета
+				cyber: {
+					'neon-blue': '#00f0ff',
+					'neon-pink': '#ff00ff',
+					'neon-purple': '#b967ff',
+					'neon-green': '#00ff9f',
+					'neon-yellow': '#fdff00',
+					'dark-blue': '#0a1128',
+					'dark-purple': '#1a0b29',
+					'dark-gray': '#151a30',
+					'black': '#050713'
 				}
 			},
 			borderRadius: {
@@ -84,11 +97,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': { 
+						'box-shadow': '0 0 5px theme(colors.cyber.neon-blue), 0 0 10px theme(colors.cyber.neon-blue)' 
+					},
+					'50%': { 
+						'box-shadow': '0 0 15px theme(colors.cyber.neon-blue), 0 0 20px theme(colors.cyber.neon-blue)' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite'
 			}
 		}
 	},
